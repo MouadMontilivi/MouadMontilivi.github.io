@@ -1,0 +1,215 @@
+:root {
+    --negro: #000000;
+    --verde: #00FF41;
+    --verde-m: #008F11;
+    --verde-o: #003B00;
+    --gris: #888;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: var(--negro);
+    color: var(--verde);
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+}
+
+/* Hero - Pantalla completa */
+.inicio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid var(--verde);
+}
+
+.nombre {
+    font-size: clamp(2.5rem, 10vw, 5.5rem);
+    letter-spacing: 10px;
+    color: #fff;
+    text-shadow: 0 0 20px var(--verde);
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: var(--verde-m);
+    margin-top: 15px;
+    letter-spacing: 5px;
+}
+
+/* Contenido */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.titulo-seccion {
+    margin-bottom: 50px;
+    border-left: 5px solid var(--verde);
+    padding-left: 15px;
+    font-size: 1.6rem;
+}
+
+.sobre-mi {
+    padding: 50px 0;
+    background-color: transparent; 
+}
+
+.contenido-sobre-mi {
+    border-left: 2px solid rgb(1, 74, 1); 
+    padding-left: 20px;
+    margin-top: 15px;
+    max-width: 800px; /* Para que el texto no sea demasiado ancho y sea fácil de leer */
+}
+
+.contenido-sobre-mi p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #e0e0e0; /* Ajusta según tu paleta */
+}
+
+.parpadeo { 
+    animation: blink 1.2s infinite; 
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.container-cv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+    margin-bottom: 120px;
+}
+
+.item-cv {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 1px solid var(--verde-o);
+}
+
+.item-cv:hover {
+    background: rgba(0, 255, 65, 0.04);
+    border-left-color: var(--verde);
+}
+
+.item-cv.academico { 
+    border-left-style: solid; 
+}
+.fecha { 
+    color: var(--verde); 
+    font-weight: bold; 
+    font-size: 0.85rem; 
+}
+.item-cv h3 { 
+    color: #fff; 
+    margin: 10px 0; 
+}
+.item-cv p { 
+    color: var(--gris); 
+    font-size: 0.95rem; 
+}
+
+/* Habilidades y Barras */
+.envoltorio-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    margin-bottom: 120px;
+}
+
+.grupo-habilidad h3 {
+    color: var(--verde);
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.barra { 
+    margin-bottom: 25px; 
+}
+.barra span { 
+    font-size: 0.85rem; 
+    color: #fff; 
+    display: block; 
+    margin-bottom: 8px; 
+}
+
+.contenedor-barra {
+    width: 100%;
+    height: 10px;
+    background: #111;
+    border: 1px solid var(--verde-o);
+}
+
+.relleno-barra {
+    height: 100%;
+    background: var(--verde);
+    box-shadow: 0 0 10px var(--verde);
+}
+
+/* Tecnologias */
+.rejilla-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-tecnica {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #111;
+    transition: 0.3s;
+}
+
+.tarjeta-tecnica:hover {
+    border-color: var(--verde);
+    transform: translateY(-5px);
+    background: rgba(0, 255, 65, 0.05);
+}
+
+.tarjeta-tecnica i { 
+    font-size: 3.5rem; 
+    display: block; 
+    margin-bottom: 15px; 
+}
+
+/* Footer */
+.footer {
+    background: #050505;
+    padding: 80px 20px 40px;
+    border-top: 1px solid var(--verde-o);
+}
+
+.div-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.redes a { 
+    color: #fff; 
+    text-decoration: none; 
+    display: block; 
+    margin: 10px 0; 
+}
+
+.redes a:hover { 
+    color: var(--verde); 
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 60px;
+    color: #333;
+    font-size: 0.75rem;
+}
