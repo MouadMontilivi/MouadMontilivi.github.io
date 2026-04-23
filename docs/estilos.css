@@ -118,11 +118,53 @@ body {
 }
 
 /* Habilidades y Barras */
-.envoltorio-habilidades {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 50px;
-    margin-bottom: 120px;
+/* Contenedor principal que une texto e imagen */
+/* 1. Contenedor padre: los pone en fila (row) y los separa */
+.envoltorio-sobre-mi {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; /* Alinea texto y foto verticalmente al centro */
+    gap: 30px;           /* Espacio entre el texto y la foto */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Nuevo contenedor que alinea texto e imagen */
+.contenido-flex {
+    display: flex;
+    flex-direction: row; /* Fuerza la fila horizontal */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 30px;           /* Espacio entre el texto y la foto */
+    margin-top: 20px;
+}
+
+/* El texto ocupa todo el espacio que sobra */
+.texto-sobre-mi {
+    flex: 1;
+}
+
+.texto-sobre-mi p{
+    color: #ffffff;
+}
+
+/* La imagen tiene un tamaño fijo y no crece */
+.imagen-sobre-mi {
+    flex: 0 0 200px; /* Ancho fijo de 200px */
+}
+
+.foto-perfil {
+    width: 100%;       /* Se adapta al tamaño del contenedor de 200px */
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Ajuste para móviles: si la pantalla es estrecha, que se apilen */
+@media (max-width: 768px) {
+    .contenido-flex {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .grupo-habilidad h3 {
