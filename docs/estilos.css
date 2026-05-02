@@ -1,6 +1,6 @@
 :root {
     --negro: #000000;
-    --verde: #00FF41;
+    --verde: #00fa3e;
     --verde-m: #008F11;
     --verde-o: #003B00;
     --gris: #888;
@@ -67,13 +67,13 @@ body {
     border-left: 2px solid rgb(1, 74, 1); 
     padding-left: 20px;
     margin-top: 15px;
-    max-width: 800px; /* Para que el texto no sea demasiado ancho y sea fácil de leer */
+    max-width: 800px; 
 }
 
 .contenido-sobre-mi p {
     margin-bottom: 15px;
     line-height: 1.6;
-    color: #e0e0e0; /* Ajusta según tu paleta */
+    color: #e0e0e0; 
 }
 
 .parpadeo { 
@@ -117,28 +117,35 @@ body {
     font-size: 0.95rem; 
 }
 
-/* Habilidades y Barras */
-/* Contenedor principal que une texto e imagen */
-/* 1. Contenedor padre: los pone en fila (row) y los separa */
 .envoltorio-sobre-mi {
     display: flex;
     flex-direction: row; 
-    align-items: center; /* Alinea texto y foto verticalmente al centro */
-    gap: 30px;           /* Espacio entre el texto y la foto */
+    align-items: center; 
+    gap: 30px;           
     margin-top: 20px;
     width: 100%;
 }
 
-/* Nuevo contenedor que alinea texto e imagen */
+.envoltorio-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+}
+
+.grupo-habilidad {
+    padding: 10px 0;
+}
+
+
 .contenido-flex {
     display: flex;
-    flex-direction: row; /* Fuerza la fila horizontal */
-    align-items: center; /* Alinea verticalmente al centro */
-    gap: 30px;           /* Espacio entre el texto y la foto */
+    flex-direction: row; 
+    align-items: center; 
+    gap: 30px;         
     margin-top: 20px;
 }
 
-/* El texto ocupa todo el espacio que sobra */
+
 .texto-sobre-mi {
     flex: 1;
 }
@@ -147,19 +154,18 @@ body {
     color: #ffffff;
 }
 
-/* La imagen tiene un tamaño fijo y no crece */
 .imagen-sobre-mi {
-    flex: 0 0 200px; /* Ancho fijo de 200px */
+    flex: 0 0 200px; 
 }
 
 .foto-perfil {
-    width: 100%;       /* Se adapta al tamaño del contenedor de 200px */
+    width: 100%;     
     height: auto;
     border-radius: 8px;
     display: block;
 }
 
-/* Ajuste para móviles: si la pantalla es estrecha, que se apilen */
+
 @media (max-width: 768px) {
     .contenido-flex {
         flex-direction: column;
@@ -192,8 +198,8 @@ body {
 
 .relleno-barra {
     height: 100%;
-    background: var(--verde);
-    box-shadow: 0 0 10px var(--verde);
+    background: #2ef849; 
+    box-shadow: 0 0 6px rgba(0, 200, 83, 0.4);
 }
 
 /* Tecnologias */
@@ -254,4 +260,8 @@ body {
     margin-top: 60px;
     color: #333;
     font-size: 0.75rem;
+}
+
+.proyectos .item-cv p {
+    color: #d0d0d0;
 }
